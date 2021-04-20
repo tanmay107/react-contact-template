@@ -1,19 +1,18 @@
 import React from 'react'
-import { Button, Card, Image } from 'semantic-ui-react'
+import { Card, Image } from 'semantic-ui-react'
 
-function Contact() {
+function Contact({ id, email, first_name, last_name, image }) {
     return (
         <Card>
             <Card.Content>
                 <Image
                 floated='right'
                 size='mini'
-                src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                src={image}
                 />
-                <Card.Header>Steve Sanders</Card.Header>
-                <Card.Meta>Friends of Elliot</Card.Meta>
+                <Card.Header>{first_name} {last_name}</Card.Header>
                 <Card.Description>
-                Steve wants to add you to the group <strong>best friends</strong>
+                {email}
                 </Card.Description>
             </Card.Content>
         </Card>
