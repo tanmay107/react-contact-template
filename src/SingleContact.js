@@ -1,6 +1,7 @@
 import React from 'react'
 
-function SingleContact() {
+function SingleContact(props) {
+    console.log(props.location.aboutProps);
     return(
         <div className = "single-contact">
             
