@@ -9,9 +9,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-
           <Route exact path = '/' component={Home} />
-
+          <Route path = '/singlecontact/:id' component={SingleContact} />
       </Router>
     </div>
   );

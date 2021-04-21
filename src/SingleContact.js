@@ -2,7 +2,7 @@ import React from 'react'
 
 function SingleContact() {
     return(
-        <div>
+        <div className = "single-contact">
             
         </div>
     )
