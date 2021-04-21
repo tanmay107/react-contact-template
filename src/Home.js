@@ -34,17 +34,6 @@ function Home() {
                             first_name = {item.first_name}
                             last_name = {item.last_name}
                             image = {item.avatar}
-                            as = {Link}
-                            to = {{
-                                pathname : `/singlecontact/${item.id}`,
-                                aboutProps : {
-                                    id : item.id, 
-                                    email : item.email,
-                                    first_name : item.first_name,
-                                    last_name : item.last_name,
-                                    image : item.avatar
-                                }
-                            }}
                         />    
                     )})}
         </div>
