@@ -22,6 +22,19 @@ function Home() {
         return fullName.toLowerCase().includes(searchField.toLowerCase())
     })
 
+    function GetSortOrder(prop) {    
+        return function(a, b) {    
+            if (a[prop] > b[prop]) {    
+                return 1;    
+            } else if (a[prop] < b[prop]) {    
+                return -1;    
+            }    
+            return 0;    
+        }    
+    }
+
+    contact.sort(GetSortOrder("first_name"));
+
     return (
         <div className="home">
             <SearchBar searchChange={onSearchChange} />
