@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
 import Contact from './components/Contact'
 import SearchBar from './components/SearchBar';
 
@@ -15,6 +14,7 @@ function Home() {
 
     const onSearchChange = event => {
         setSearchField(event.target.value)
+        console.log(event.target.value);
     }
 
     const filteredContact = contact.filter(contact => {
@@ -24,8 +24,8 @@ function Home() {
 
     return (
         <div className="home">
-            {/* <SearchBar searchChange={onSearchChange} /> */}
-            {contact.map((item) => {
+            <SearchBar searchChange={onSearchChange} />
+            {filteredContact.map((item) => {
                     return (
                         <Contact 
                             key = {item.id}
